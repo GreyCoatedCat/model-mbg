@@ -1,0 +1,5 @@
+# Laptop/PC untuk training (GPU NVIDIA). Install torch dulu sesuai CUDA:
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu128
+ultralytics>=8.4
+numpy
+pillow

@@ -1,0 +1,6 @@
+# Raspberry Pi 4 - Raspberry Pi OS 64-bit (Bookworm). OS 32-bit TIDAK didukung.
+# torch versi CPU aarch64 ikut terpasang otomatis sebagai dependensi ultralytics.
+ultralytics>=8.4
+ncnn
+# Pi Camera: pakai paket sistem -> sudo apt install python3-picamera2
+# lalu buat venv dengan: python3 -m venv --system-site-packages .venv

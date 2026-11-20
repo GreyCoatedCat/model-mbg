@@ -1,0 +1,47 @@
+# ---------------------------------------------------------------
+# Python / environment
+# ---------------------------------------------------------------
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# ---------------------------------------------------------------
+# Dataset (besar, ±2 GB) - bagikan lewat Roboflow / Drive, bukan git
+# Yang tetap di-commit: docs/ (tabel gizi), src/, README.roboflow.txt
+# ---------------------------------------------------------------
+*.zip
+__MACOSX/
+.DS_Store
+menu-mbg-mbkm.v1i.coco/menu-mbg-mbkm.v1i.coco/train/
+menu-mbg-mbkm.v1i.coco/menu-mbg-mbkm.v1i.coco/valid/
+menu-mbg-mbkm.v1i.coco/menu-mbg-mbkm.v1i.coco/test/
+
+# Hasil prepare_dataset.py / resplit.py (bisa dibuat ulang)
+datasets/
+*.cache
+
+# ---------------------------------------------------------------
+# Training & inferensi
+# ---------------------------------------------------------------
+# Bobot pretrained yang diunduh otomatis oleh Ultralytics
+yolo/*.pt
+yolo/*.log
+yolo/hasil_deteksi/
+hasil_deteksi/
+
+# Folder runs/ diabaikan, KECUALI model final (split per sesi) yang
+# dipakai di Raspberry Pi: best.pt + export NCNN (total ±28 MB).
+yolo/runs/**
+!yolo/runs/**/
+!yolo/runs/mbg/seg-n-scene/weights/best.pt
+!yolo/runs/mbg/seg-n-scene/weights/best_*_ncnn_model/**
+
+# ---------------------------------------------------------------
+# Editor / OS
+# ---------------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+Thumbs.db
